@@ -16,5 +16,8 @@
     "cheerio": "^0.17.0",
     "commander": "^2.3.0",
     "request": "^2.44.0"
+  },
+  "bin": {
+    "npm-scrap": "./bin/npm-scrap"
   }
 }
