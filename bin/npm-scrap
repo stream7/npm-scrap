@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+var program = require('commander');
+var version = require('./../package').version;
+var cli = require('./../cli');
+
+program.version(version);
+
+program
+    .command('search <terms>')
+        .description('Scrap npmjs.org and return search results')
+        .action(function () {
+            // no idea how it commander does this with multiple args
+            var terms = process.argv.slice(3, process.argv.length).join(' ');
+            cli(terms);
+        });
+
+program.parse(process.argv);

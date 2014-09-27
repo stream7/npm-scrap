@@ -1,0 +1,20 @@
+{
+  "name": "npm-scrap",
+  "version": "0.0.0",
+  "description": "Scrap npm website for search results (cause npm search stopped working when I was young)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "search"
+  ],
+  "author": "Nikos Gereoudakis <nikos@gereoudakis.me>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "commander": "^2.3.0",
+    "request": "^2.44.0"
+  }
+}
