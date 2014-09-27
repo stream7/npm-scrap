@@ -1,6 +1,6 @@
 {
   "name": "npm-scrap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Scrap npm website for search results (cause npm search stopped working when I was young)",
   "main": "index.js",
   "scripts": {
