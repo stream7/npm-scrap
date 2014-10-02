@@ -1,7 +1,7 @@
 {
   "name": "npm-scrap",
   "version": "0.0.4",
-  "description": "Scrap npm website for search results (cause npm search stopped working when I was young)",
+  "description": "Scrap npm website for search results",
   "main": "index.js",
   "repository": {
     "type": "git",
