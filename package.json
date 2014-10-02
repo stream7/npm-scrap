@@ -3,8 +3,13 @@
   "version": "0.0.3",
   "description": "Scrap npm website for search results (cause npm search stopped working when I was young)",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stream7/npm-scrap.git"
+  },
   "scripts": {
-    "test": "node_modules/jshint/bin/jshint *.js"
+    "hint": "node_modules/jshint/bin/jshint *.js",
+    "test": "node_modules/mocha/bin/mocha spec.js"
   },
   "keywords": [
     "npm",
@@ -21,6 +26,9 @@
     "npm-scrap": "./bin/npm-scrap"
   },
   "devDependencies": {
-    "jshint": "^2.5.6"
+    "chai": "^1.9.2",
+    "concat-stream": "^1.4.6",
+    "jshint": "^2.5.6",
+    "mocha": "^1.21.4"
   }
 }

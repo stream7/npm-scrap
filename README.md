@@ -1,5 +1,7 @@
 # npm-scrap
 
+[![Build status](https://secure.travis-ci.org/stream7/npm-scrap.svg?branch=master)](http://travis-ci.org/stream7/npm-scrap)
+
 Scrap npm website for search results (cause npm search stopped working when I was young)
 
 ## Installation
