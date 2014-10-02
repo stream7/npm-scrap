@@ -1,19 +1,23 @@
+'use strict';
 var request = require('request');
 var cheerio = require('cheerio');
 
 var Scrapper = function (terms) {
     this.terms = terms;
-}
+};
 
 Scrapper.prototype.search = function (cb) {
-    request('https://www.npmjs.org/search?q=' + encodeURIComponent(this.terms), function (err, res, body) {
-        if (err) return cb(err);
+    var url = 'https://www.npmjs.org/search?q=' + encodeURIComponent(this.terms);
+    
+    request(url, function (err, res, body) {
+        if (err) {
+            return cb(err);
+        }
 
-        $ = cheerio.load(body);
-
+        var $ = cheerio.load(body);
         var results = [];
 
-        $('.search-result.package').each(function (package) {
+        $('.search-result.package').each(function () {
             results.push({
                 name: $(this).find('h2 a').text(),
                 description: $(this).find('.description').text(),
@@ -27,6 +31,6 @@ Scrapper.prototype.search = function (cb) {
 
         cb(null, this.results);
     }.bind(this));
-}
+};
 
 module.exports = Scrapper;

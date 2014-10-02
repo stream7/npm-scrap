@@ -4,7 +4,7 @@
   "description": "Scrap npm website for search results (cause npm search stopped working when I was young)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/jshint/bin/jshint *.js"
   },
   "keywords": [
     "npm",
@@ -19,5 +19,8 @@
   },
   "bin": {
     "npm-scrap": "./bin/npm-scrap"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6"
   }
 }
