@@ -16,7 +16,6 @@ describe('Scrapper', function () {
         new Scrapper('backbone').search(function (err, data) {
             var backbone = data[0];
             expect(backbone.name).to.equal('backbone');
-            expect(backbone.author).to.equal('jashkenas');
             expect(backbone).to.have.property('version');
             expect(backbone).to.have.property('url');
             expect(backbone).to.have.property('description');

@@ -7,7 +7,7 @@ program.version(version);
 
 program
     .command('search <terms>')
-        .description('Scrap npmjs.org and return search results')
+        .description('Scrap npmjs.com and return search results')
         .action(function () {
             // no idea how it commander does this with multiple args
             var terms = process.argv.slice(3, process.argv.length).join(' ');

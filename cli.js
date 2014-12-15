@@ -19,8 +19,7 @@ function printResults (results) {
         return 'Name: ' + pkg.name + '\n' +
                 'Description: ' + pkg.description + '\n' +
                 'URL: ' + pkg.url + '\n' +
-                'Version: ' + pkg.version + '\n' +
-                'Author: ' + pkg.author + '\n';
+                'Version: ' + pkg.version + '\n';
     }).join('\n'));
 }
 
