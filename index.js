@@ -17,7 +17,7 @@ Scrapper.prototype.search = function (cb) {
         var $ = cheerio.load(body);
         var results = [];
 
-        $('.package-widget').each(function () {
+        $('.package-details').each(function () {
             results.push({
                 name: $(this).find('.name').text(),
                 description: $(this).find('.description').text(),
