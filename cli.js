@@ -17,9 +17,11 @@ function printResults (results) {
     console.log('Results:\n');
     console.log(results.map(function (pkg) {
         return 'Name: ' + pkg.name + '\n' +
+                'Author: ' + pkg.author + '\n' +
                 'Description: ' + pkg.description + '\n' +
                 'URL: ' + pkg.url + '\n' +
-                'Version: ' + pkg.version + '\n';
+                'Version: ' + pkg.version + '\n' +
+                'Stars: ' + pkg.stars + '\n';
     }).join('\n'));
 }
 

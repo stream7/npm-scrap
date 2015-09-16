@@ -17,10 +17,12 @@ Scrapper.prototype.search = function (cb) {
         var $ = cheerio.load(body);
         var results = [];
 
-        $('.package-widget').each(function () {
+        $('.package-details').each(function () {
             results.push({
                 name: $(this).find('.name').text(),
                 description: $(this).find('.description').text(),
+                author: $(this).find('.author').text(),
+                stars: $(this).find('.stars').text(),
                 version: $(this).find('.version').text().match(/\d+\.\d+\.\d+/)[0],
                 url: 'https://www.npmjs.com/package/' + $(this).find('.name').text()
             });
