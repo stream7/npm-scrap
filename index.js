@@ -2,12 +2,8 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-var Scrapper = function (terms) {
-    this.terms = terms;
-};
-
-Scrapper.prototype.search = function (cb) {
-    var url = 'https://www.npmjs.com/search?q=' + encodeURIComponent(this.terms.join(' '));
+var scrap = function (terms, cb) {
+    var url = 'https://www.npmjs.com/search?q=' + encodeURIComponent(terms.join(' '));
 
     request(url, function (err, res, body) {
         if (err) {
@@ -28,10 +24,8 @@ Scrapper.prototype.search = function (cb) {
             });
         });
 
-        this.results = results;
-
-        cb(null, this.results);
-    }.bind(this));
+        cb(null, results);
+    });
 };
 
-module.exports = Scrapper;
+module.exports = scrap;

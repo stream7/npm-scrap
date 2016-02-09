@@ -1,12 +1,12 @@
 'use strict';
-var Scrapper = require('./index');
+var scrap = require('./index');
 
 function search (terms, params) {
     if (!params.short) {
         console.log('\nTerms: %s', terms, '\n');
     }
 
-    new Scrapper(terms).search(function (err, results) {
+    scrap(terms, function (err, results) {
         if (err) {
             return console.error('Error: %s', err);
         }

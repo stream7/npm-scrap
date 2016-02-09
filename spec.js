@@ -4,16 +4,16 @@ var path = require('path');
 var expect = require('chai').expect;
 var concat = require('concat-stream');
 
-var Scrapper = require('./');
+var scrap = require('./');
 
-describe('Scrapper', function () {
+describe('scrap', function () {
     // we are querying the npmjs.org website during our test so
     // we need to increase the timeout. We do so that we know when they
     // make a change in their html
     this.timeout(5000);
 
     it('should scrap correctly npmjs.org', function (done) {
-        new Scrapper(['backbone']).search(function (err, data) {
+        scrap(['backbone'], function (err, data) {
             var backbone = data[0];
             expect(backbone.name).to.equal('backbone');
             expect(backbone).to.have.property('author');

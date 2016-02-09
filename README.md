@@ -30,10 +30,10 @@ Options:
 #### API
 
 ```javascript
-var Scrapper = require('npm-scrap');
-var terms = 'backbone marionette';
+var scrap = require('npm-scrap');
+var terms = ['backbone', 'marionette'];
 
-new Scrapper(terms).search(function (err, results) {
+scrap(terms, function (err, results) {
     if (err) {
         return console.error('Error: %s', err);
     }
