@@ -7,6 +7,7 @@ program.version(version);
 
 program
     .arguments('<terms...>')
+    .option('-s, --short', 'Show only package title')
     .description('Scrap npmjs.com and return search results')
     .parse(process.argv);
 

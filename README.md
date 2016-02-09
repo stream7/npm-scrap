@@ -24,6 +24,7 @@ Options:
 
   -h, --help     output usage information
   -V, --version  output the version number
+  -s, --short    Show only package title
 ```
 
 #### API
