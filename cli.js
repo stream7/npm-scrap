@@ -1,7 +1,7 @@
 'use strict';
 var Scrapper = require('./index');
 
-function search (terms) {
+function search (terms, params) {
     console.log('\nTerms: %s', terms, '\n');
 
     new Scrapper(terms).search(function (err, results) {

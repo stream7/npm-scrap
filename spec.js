@@ -13,7 +13,7 @@ describe('Scrapper', function () {
     this.timeout(5000);
 
     it('should scrap correctly npmjs.org', function (done) {
-        new Scrapper('backbone').search(function (err, data) {
+        new Scrapper(['backbone']).search(function (err, data) {
             var backbone = data[0];
             expect(backbone.name).to.equal('backbone');
             expect(backbone).to.have.property('author');
@@ -34,7 +34,7 @@ describe('npm-scrap cli', function () {
     });
 
     it('should print the search results to stdout', function(done) {
-        var proc = child.spawn(this.executable, ['search', 'backbone']);
+        var proc = child.spawn(this.executable, ['backbone']);
 
         proc.stdout.pipe(concat(function (output) {
             var results = output.toString('utf8');

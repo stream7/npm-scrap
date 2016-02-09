@@ -7,7 +7,7 @@ var Scrapper = function (terms) {
 };
 
 Scrapper.prototype.search = function (cb) {
-    var url = 'https://www.npmjs.com/search?q=' + encodeURIComponent(this.terms);
+    var url = 'https://www.npmjs.com/search?q=' + encodeURIComponent(this.terms.join(' '));
 
     request(url, function (err, res, body) {
         if (err) {

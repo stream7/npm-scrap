@@ -16,13 +16,9 @@ npm install -g npm-scrap
 #### CLI
 
 ```
-npm-scrap [options] [command]
+npm-scrap [options] <terms...>
 
-Commands:
-
-  search <terms>
-     Scrap npmjs.org and return search results
-
+Scrap npmjs.com and return search results
 
 Options:
 
