@@ -16,27 +16,24 @@ npm install -g npm-scrap
 #### CLI
 
 ```
-npm-scrap [options] [command]
+npm-scrap [options] <terms...>
 
-Commands:
-
-  search <terms>
-     Scrap npmjs.org and return search results
-
+Scrap npmjs.com and return search results
 
 Options:
 
   -h, --help     output usage information
   -V, --version  output the version number
+  -s, --short    Show only package title
 ```
 
 #### API
 
 ```javascript
-var Scrapper = require('npm-scrap');
-var terms = 'backbone marionette';
+var scrap = require('npm-scrap');
+var terms = ['backbone', 'marionette'];
 
-new Scrapper(terms).search(function (err, results) {
+scrap(terms, function (err, results) {
     if (err) {
         return console.error('Error: %s', err);
     }

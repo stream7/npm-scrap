@@ -6,12 +6,9 @@ var cli = require('./../cli');
 program.version(version);
 
 program
-    .command('search <terms>')
-        .description('Scrap npmjs.com and return search results')
-        .action(function () {
-            // no idea how it commander does this with multiple args
-            var terms = process.argv.slice(3, process.argv.length).join(' ');
-            cli(terms);
-        });
+    .arguments('<terms...>')
+    .option('-s, --short', 'Show only package title')
+    .description('Scrap npmjs.com and return search results')
+    .parse(process.argv);
 
-program.parse(process.argv);
+cli(program.args, program);
